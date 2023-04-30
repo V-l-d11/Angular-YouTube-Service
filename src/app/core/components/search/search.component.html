@@ -1,0 +1,35 @@
+<div class="block">
+  <div class="mcard"> 
+    <img src="../../../assets/logo.png"  alt="Yout Tube" class="mark"/>
+  </div>
+
+<form class="example-form"  >
+ 
+    <mat-form-field class="example-full-width">
+      <mat-label>Serach</mat-label>
+      <input matInput placeholder="Search movise"
+      [formControl]="findControl" 
+      type="text"
+      placeholder="Seatch by name"
+    >
+      
+    </mat-form-field>  
+  </form>
+  
+
+  
+<div class="login">
+
+ <span clas="login-sp">User Name</span>
+ 
+ <a class="hide-btn"  [routerLink]="['login']"><img  src="../../../assets/Subtract.png" class="login-img"/> login</a> 
+ 
+ <a ><button (click)="logout()" class="hide-btn out-btn">Logout</button></a>
+  
+  <a *ngIf="isAuth"><button (click)="goToAdminPanel()" class="hide-btn out-btn" >AdminPanel</button></a>
+
+ <button (click)="change(hide=!hide)"  class="hide-btn"> <img src="../../../assets/search_settings.png"  class="set-img"/> </button>
+</div>
+   
+  
+  </div>

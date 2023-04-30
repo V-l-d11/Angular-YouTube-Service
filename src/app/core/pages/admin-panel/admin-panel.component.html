@@ -1,0 +1,76 @@
+<div class="adminMain">
+
+  <form class="form-ctr" [formGroup]="adminForm" (submit)="adminForm.valid && submit()">
+    
+    <mat-form-field class="example-full-width">
+
+    <mat-label>Title</mat-label>
+    <input matInput type="text" placeholder="title" formControlName="title" >
+   
+    <div *ngIf="m['title']!.touched">
+      <small>Please write a title</small>
+    </div>
+
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+  
+    <mat-label>Description</mat-label>
+    <input matInput type="text" placeholder="description" formControlName="description" >
+   
+  </mat-form-field>
+
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Img</mat-label>
+    <input matInput type="text" placeholder="img" formControlName ="img">
+  </mat-form-field>
+ 
+
+    <mat-form-field class="example-full-width">
+    <mat-label>link fo Vidoe</mat-label>
+    <input matInput type="text" placeholder="link on Video" formControlName="linkVidoe">
+  
+  </mat-form-field>
+
+
+     <mat-form-field class="example-full-width">
+
+     <mat-label>Date of create</mat-label>
+     <input matInput type="text" placeholder="dd.mm.rrrr" formControlName="date">
+    
+    </mat-form-field>
+
+
+    <div *ngIf="v['linkVidoe']!.touched && v['linkVidoe'].invalid">
+      <div *ngIf="v['linkVidoe'].errors && v['linkVidoe'].errors['required']">Please provide truth url</div>
+     </div>
+
+
+    <div *ngIf="m['img']!.touched && m['img'].invalid">
+      <div *ngIf="m['img'].errors && m['img'].errors['required']">Please provide truth url</div>
+     </div>
+
+    
+     <div *ngIf="v['linkVidoe']!.touched">
+      <small>Please write a link</small>
+    </div>
+    
+
+    <div *ngIf="m['img']!.touched">
+      <small>Please write a url</small>
+    </div>
+
+
+     <div *ngIf="m['date'].errors">
+      <small>Date of Birth must be a valid </small>
+     </div>
+
+
+    <button mat-raised-button  class="btn"  type="submit">Create Card</button>
+  </form>
+
+
+
+</div>

@@ -1,0 +1,23 @@
+$colorBtn:#2F80ED;
+$colorTag:#929292;
+
+.m-sort{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sc-sort{
+    font-size: 16px;
+    padding: 18px 11px; 
+    color:$colorTag;
+}
+.a-sort{
+    padding: 11px;
+    color: $colorBtn;
+    text-decoration:solid #2F80ED;
+}
+.btn-ev{
+    border: none;
+    background-color: rgb(0,0,0,0);
+    cursor: pointer;
+}

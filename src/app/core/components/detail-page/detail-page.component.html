@@ -1,0 +1,26 @@
+
+<div class="card-Main">
+
+ <button (click)=" goBack()" class="btn-ex">
+  <mat-icon>
+    <span class="material-symbols-outlined">
+      arrow_back_ios
+      </span>
+  </mat-icon>
+</button>
+
+
+<img src={{element?.snippet?.thumbnails?.medium?.url}} />
+
+
+
+<div class="card-inf">
+    <h2 class="h2-cr">{{element?.snippet?.title}}</h2>
+    <span class="sp-cr">{{element?.snippet?.publishedAt}}</span>
+    <h3 class="h3-cr">Description</h3>
+    <p class="p-cr">{{element?.snippet?.description}}</p>
+
+      
+</div>
+
+</div>

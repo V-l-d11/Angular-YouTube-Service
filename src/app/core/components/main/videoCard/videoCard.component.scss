@@ -1,0 +1,53 @@
+$fontTitle: 'Roboto';
+
+.example-card {
+    max-width: 263px;
+    height: 327px;
+
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+   
+  }
+  .btn-m{
+    width: 120px;
+    height: 32px;
+    font-size: 12px;
+    font-family: $fontTitle;
+    font-weight: 400;
+    background-color:  #2F80ED;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 5px 5px;
+    margin-top: 50px;
+   }
+   .btn-set{
+    border:0px;
+    padding: 10px;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+   }
+   .title{
+    padding:10px  0px;
+    margin-top:5px;
+    font-size: 10px;
+    font-family: $fontTitle;
+    color:#000a16;
+   }
+   .title-m{
+    font-size: 20px;
+    font-family:$fontTitle;
+    font-weight: 700;
+    text-align: center;
+   }
+   .mat-cont{
+    display: flex;
+    align-items: center;
+   }
+   .photo{
+    margin: 0 auto;
+    width:223px;
+    height: 123px;
+   }

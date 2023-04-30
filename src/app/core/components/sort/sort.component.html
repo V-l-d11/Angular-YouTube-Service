@@ -1,0 +1,15 @@
+<ng-template [ngIf]="hide">
+
+<div class="m-sort">
+    <span class="sc-sort">Sorting by:</span>
+   <button class="btn-ev" (click)="onChangeSort(isSort=!isSort)"> <a class="a-sort">date</a></button>
+   <button class="btn-ev"  (click)="onChangeOrder()"><a class="a-sort">count of views</a></button> 
+   <a class="a-sort">by word or sentance</a>
+    <input 
+    type="text" 
+    placeholder="Serach by name" 
+    [(ngModel)]="addVal"
+    />
+</div>
+
+</ng-template>

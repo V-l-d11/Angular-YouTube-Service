@@ -1,0 +1,64 @@
+<div class="login-frm">
+
+<form class="form-ctr"  [formGroup]="form"  (ngSubmit)="submit()"   novalidate>
+    <div>
+        
+            <mat-form-field class="example-full-width">
+              <mat-label>Login</mat-label>
+              <input  
+              matInput 
+              placeholder="Login"
+              value="Login"
+              formControlName="login"
+              >
+            </mat-form-field>  
+    
+    </div>
+    <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="validathion">     
+    <small *ngIf="form.get('email')?.errors">email is not requerid</small>
+   
+ </div>
+
+ 
+
+ 
+
+
+    <div>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input 
+            matInput
+            type="password"
+            placeholder="password"
+            formControlName="password"  
+            >
+          </mat-form-field> 
+
+    </div>
+
+
+
+
+  <div class="error"  *ngIf="form.get('password')!.getError('invalidPasswordNumber') && form.get('password')!.touched">
+    {{form.get('password')!.getError('invalidPasswordNumber')}}
+   </div>
+
+   <div class="error"  *ngIf="form.get('password')!.getError('invalidPasswordBigLatters') && form.get('password')!.touched">
+    {{form.get('password')!.getError('invalidPasswordBigLatters')}}
+   </div>
+  
+   <div class="error"  *ngIf="form.get('password')!.getError('invalidPassworsmallLetters') && form.get('password')!.touched">
+    {{form.get('password')!.getError('invalidPassworsmallLetters')}}
+   </div>
+ 
+   
+
+
+
+    <button mat-raised-button type="submit" [disabled]="form.invalid"  color="primary" class="btn">Login</button>
+
+</form>
+
+</div>
